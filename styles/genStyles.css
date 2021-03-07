@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.vid-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.main-bg{
+    width: 100%;
+}
+.alt-bg{
+    margin: 10%;
+    background: url(../images/pic2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+.my-header{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+    margin: 25px 50px;
+
+}
+.logo{
+    padding-left: 50px;
+    padding-right:  50px;
+    z-index: 1;
+    font-size: 4em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 7px 5px 7px black;
+    color: whitesmoke;
+}
+.logo>span{
+    text-decoration: underline;
+    font-style: italic;
+    color: rgb(204, 121, 121);
+}
+.my-ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+.my-ul >li{
+    z-index: 1;
+    padding: 25px 50px;
+    font-size: 22px;
+    
+}
+.my-ul li a{
+    font-family: 'Bangers', cursive;
+    color: rgb(12, 12, 12);
+    text-decoration: none;
+    font-size: 29px;
+}
+.my-ul li a:hover{
+    background-color: blanchedalmond;
+    color: black;
+    padding: 9px;
+    border-radius: 10%;
+    transition: 0.3s;
+
+}
+.my-btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: wheat;
+    color: black;
+    border: none;
+    padding: 2px;
+    width: 15%;
+    font-size: 24px;
+}
+.my-btn:hover{
+    text-decoration: none;
+    color: black;
+    background-color: rgba(245, 222, 179, 0.616);
+    transition: 0.2s;
+}
+.alt-btn{
+    border: none;
+    padding: 8px;
+    color: black;
+    background-color: wheat;
+}
+.alt-btn:hover{
+    text-decoration: none;
+    color: black;
+    background-color: rgba(245, 222, 179, 0.616);
+    transition: 0.2s;
+}
+.the-footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    color: white;
+    background-color: black;
+    width: 100%;
+}
+
+@media only screen and (max-width:750px){
+    
+    .my-header{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2px 20px;
+        justify-content: center;
+        /* 
+        flex-direction: row;
+        padding: 10px 20px;
+        margin: 25px 50px; */
+    }
+    .logo{
+        font-size: 37px;
+    }
+    .my-ul{
+        display: flex;
+        position: fixed;
+        height: 60vh;
+        width: 65%;
+        right: 5%;
+        flex-direction: column;
+        clip-path: circle(1000px at 50% -50%);
+        -webkit-clip-path:circle(1000px at 50% -50%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+        background-color: red;
+    }
+    nav{
+        position: relative;
+        z-index: 10;
+        top: 0;
+        padding: 0px;
+        z-index: 2;
+    }
+    .my-ul .open{
+        clip-path: circle(850px at 50% -20%);
+        -webkit-clip-path:circle(850px at 50% -20%);
+        pointer-events: all;
+    }
+    .my-ul.close{
+        display: none;
+    }
+    .my-ul li a{
+        font-size: 23px;
+    }
+    .hambuger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 500%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 6px;
+        margin-left:89%;
+        margin-top: -4%;
+    }
+    .my-ul.hide{
+        transform: translateY(-250%);
+    }
+}
+/* ////FIGURE OUT CONFIG FOR SMALLER DEVICE */
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- GOOGLE FONTS STYKESHEET -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/genStyles.css">
+    <link rel="stylesheet" href="../styles/altlg.css">
+
+    <!-- ANIMATE CSS LINK -->
+    <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <!-- JS SCRIPT -->
+    <script src="../script/script.js"></script>
+
+    <title>Login</title>
+  </head>
+  <body>
+        <header class="my-header" title="header">
+            <h2 class="logo">Book<span>Mart</span></h2>
+            <nav>
+                <ul class="my-ul">
+                    <li><a href="../html/index.html">HOME</a></li>
+                    <li><a href="../html/about.html">ABOUT</a></li>
+                    <li><a href="../html/contact.html">CONTACT US</a></li>
+                    <li><a href="../html/lg.html">LOGIN / SIGN-UP</a></li>
+    
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <div id="lg-cont" class="lg-container">
+                <div class= "pic">
+                    <img src="../images/pic5.png" alt="book" height="240" width="220">
+                    <p><a id="signUp-btn" href="#">Create an Account</a></p>
+                    <p><a id="fgPassword-btn" href="#">Forgot Password</a></p>
+
+                </div>
+
+                <div id="lg-form" class="log ">
+                    <h4 id="form-header">LOGIN</h4>
+                    <form action="../php/logIn.php" method="POST">
+                        <div id="user">
+                            <input type="text" required name="userID" id="userID" placeholder="userID">
+                        </div>
+                        <div id="pass">
+                            <input type="password" required name="userPW" id="userPW" placeholder="password">
+                        </div>
+                        <div>
+                            <button class="sub-btn" type="submit" name="login" value="submit">LOGIN</button>
+                        </div>
+                    </form>
+                </div>
+            </div>  
+
+            <div class="fg-pass-container" id="fg-pass">
+                <div class="pic">
+                    <img src="../images/pic8.png" alt="forgort password" height="240" width="220">
+                    <p><a href="../html/lg.html">Login</a></p>
+                </div>
+
+                <div id="fg-Pass" class="forgotPass animated slideInLeft">
+                    <h5 >FORGORT PASSWORD</h5>
+                    <form action="../php/forgortPassword.php" method="POST">
+                        <div id="fg-mail">
+                            <input type="email" name="fg-email" id="fg-email" placeholder="Enter email">
+                        </div>
+                        <div id="newPassword">
+                            <input type="password" id="newPass" name="newPass" class="newPass" placeholder="Password">
+                        </div>
+                        <div id="ConfirmnewPassword">
+                            <input type="password" id="ConfirmnewPass" class="newPass" placeholder="Confirm Password">
+                        </div>
+                        <button class="sub-btn" type="submit" name="chg-pass" value="submit">Change Password</button>
+                    </form>
+                   
+                </div>
+            </div>
+
+            
+            <div id="signUp-Form" class="sigUp-container">
+                    <div class="pic">
+                        <img src="../images/pic6.png" alt="ink and quill" height="240" width="220">
+                        <p><a id="lg-btn" href="#">I'm Already a Member</a></p>
+                    </div>
+
+                    <!-- animated slideInLeft -->
+                    <div  class="sign-up animated slideInLeft">    
+                        <h4 id="signUp">SIGN-UP</h4>
+                        <form action="../php/signUp.php" method="POST" >
+                            <div id="info">
+                                <input type="text" required id="FN" name="FN" placeholder="Name">
+        
+                            </div>
+
+                            
+                            <div id="email-id">
+                                <input type="email" name="email" id="email" placeholder="Email - Address"> 
+                            </div>
+
+                            <div id="phone-num">
+                                <input type="tel" name="phoneNO" id="phoneNO" placeholder="Phone-No">
+                            </div>
+    
+                            <div id="userName">
+                                <input type="text" id="username" required name="username" placeholder="Username">
+
+                            </div>
+
+                            <div  id="userPass">
+                                <input type="password" maxlength = 10 required id="userPassword" name="userPassword" placeholder="Enter Password">
+
+                            </div>
+
+                            <div id="Confim-userPass">
+    
+                                <input type="password" required name="confirmPassword" id="confrimPassword" placeholder="Repeat Password"> 
+                            </div>
+                            
+                                <button type="submit" name="signUp" class="sub-btn">SIGN-UP</button>
+                        </form>
+                    </div>
+               </div>
+            </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="../script/script.js"></script>
+</body>
+</html>

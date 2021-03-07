@@ -1,0 +1,131 @@
+.board-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+    padding:15px 30px;
+    width: 15%;
+    height: 100vh;
+}
+.dsh{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    font-weight: lighter;
+    width: 100%;
+    padding: 15px 30px;
+}
+.dsh-ul{
+    list-style: none;
+}
+.dsh-ul >li{
+    padding: 20px;
+    border-bottom: rgba(0, 0, 0, 0.363) 2px ridge;
+}
+.dsh-ul li a{
+    font-size: 19px;
+    font-weight: lighter;
+    color: black;
+}
+.dsh-ul li a:hover{
+    color: rgba(0, 0, 0, 0.692);
+    font-weight: bold;
+    text-decoration: none;
+    transition:0.1s;
+}
+.wel{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 70%;
+    padding: 10px 30px;
+    margin: 30px;
+}
+.search-item {
+    /* display:inline-block; */
+    padding: 10px 30px; 
+    margin: 30px;
+    background-color: whitesmoke;
+    width: 80%;
+}
+.search-item input{
+    padding: 4px;
+    width: 70%;
+} 
+.search-item select{
+    padding: 4px;
+}
+.search-btn{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 4px;
+}
+.search-btn:hover{
+    background-color: rgba(0, 0, 0, 0.582);
+}
+.req-bk{
+    padding: 10px 30px; 
+    margin: 30px;
+    background-color: whitesmoke;
+    width: 80%;
+}
+.req-bk input{
+    padding: 4px;
+    width: 20%;
+}
+.order-book{
+    padding: 10px 30px; 
+    margin: 30px;
+    background-color: whitesmoke;
+    width: 80%;
+}
+.order-book input{
+    padding: 4px;
+    width: 70%;
+}
+.myBooks{
+    padding: 10px 30px; 
+    margin: 30px;
+    background-color: whitesmoke;
+    width: 80%;
+}
+.find-tutor{
+    padding: 10px 30px; 
+    margin: 30px;
+    background-color: whitesmoke;
+    width: 80%;
+}
+.update-account{
+    padding: 10px 30px; 
+    margin: 30px;
+    background-color: whitesmoke;
+    width: 80%;
+}
+.hide-div{
+    padding: 5px 10px; 
+    margin: 15px;
+    background-color: whitesmoke;
+    width: 80%;
+}
+.hide-div>inp
+.my-h5{
+    font-weight: bold;
+    font-size: 29px;
+    opacity:0.8;
+}
+.my-h6{
+    font-weight: lighter;
+    font-size: 21px;
+    opacity: 0.8;
+}
+
+#requests, #orders{
+    padding: 10px 20px;
+}

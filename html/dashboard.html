@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- GOOGLE FONTS STYKESHEET -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../styles/aboutStyle.css"> -->
+    <link rel="stylesheet" href="../styles/genStyles.css">
+    <link rel="stylesheet" href="../styles/dash.css">
+    <title>Dashboard Page</title>
+  </head>
+  <body>
+        <!-- Menu screen after you login-->
+        <section class="board-container"> 
+            <h5 class="dsh"><span>Account </span> <span> DashBoard</span></h5>
+            <div class="sidebar">
+                <ul class="dsh-ul">
+                    <li id="item1"><a title="search" href="#">SEARCH</a></li>
+                    <li id="item2"><a title="Request-BOOK" href="#">REQUEST BOOK</a></li>
+                    <li id="item3"><a title="order-book" href="#">ORDER BOOK</a></li>
+                    <li id="item4"><a title="selected books" href="#">MY BOOKS</a></li>
+                    <li id="item6"><a title="Account Details" href="#">ACCOUNT</a></li>
+                    <li id="item7"><a title="Logout" href="../php/logout.php">LOGOUT</a></li>
+                </ul>
+            </div>
+            <!-- Initial menu screen welcome message-->
+            <div id="welcomeNote" class="wel">
+                <h5 class="my-h5">WELCOME TO BOOKMART.</h5>
+                <h6 class="my-h6">TO GET STARTED CLICK ON THE SEARCH BUTTON TO THE LEFT, TO FIND THE BOOK YOU ARE LOOKING FOR.</h6>
+                <h6 class="my-h6">WE ADVISE TO MAKE FULL USE OF OUR SERVICES.</h6>
+            </div>
+
+            <!-- SEARCH FOR BOOK FROM TABLE IN DATABASE WITH CATEGORY -->
+            <div title="search for books" id="search-item" class="search-item">
+                <form method="POST" action="../php/search.php">
+                <input required type="text" name="search" id="search" placeholder="Enter Book Name">
+                <select name="catg" required id="catg">
+                    <option value="">Category</option>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Non-Fiction">Non-Fiction</option>
+                    <option value="History">History</option>
+                    <option value="Art">Art</option>
+                    <option value="Biology">Biology</option>
+                    <option value="Literature">Literature</option>
+                    <option value="ComputerScience">Computer-Science</option>
+                    <option value="other">Other</option>
+                </select>
+                <button type="submit" id="search-btn" class="search-btn">SEARCH</button>
+                <div id="foundBooks">
+
+                </div>
+            </form>
+            </div>
+
+            <!-- REQUEST BOOK NOT IN DATABASE -->
+            <div title="request-book" id="req-bk" class="req-bk">
+                <form action="../php/request.php" method="POST">
+                    <input title="Book-Name" required type="text" name="reqBook" id="reqBook" placeholder="Enter Book Name">
+                    <input type="text" name="category" id="category" title="Enter Category to Narrow Search" placeholder="Category">
+                    <button type="submit" id="sub-req" name="sub-req" class="search-btn">PLACE REQUEST</button>
+    
+                    <!-- to show requests made by person -->
+                    <div id="requests">
+                        
+                    </div>
+                </form>
+               
+
+            </div>
+
+            <!-- ORDER BOOK -->
+            <div title="order-books" id="order-book" class="order-book">
+                <!-- <h5 class="my-h5">THIS FEATURE IS UNAVAILABLE AT THE MOMENT.</h5>
+                <h6 class="my-h6">YOU WILL BE NOTIFIED VIA EMAIL UPON ACTIVATION.</h6> -->
+                <input title="Book-Name" required type="text" name="order-name" id="order-name" placeholder="Enter Book Name">
+                <!-- <input type="text" name="order-catg" id="order-catg" title="Enter Category to Narrow Search" placeholder="Category"> -->
+
+                <button type="submit" id="orderBk" class="search-btn">SEARCH ONLINE</button>
+
+                <div id="orders">
+
+                </div>
+            </div>
+            <!-- NEED A NEW FILE FOR CART -->
+
+            <!-- SELECTED BOOKS -->
+            <div title="my-books" id="myBooks" class="myBooks"> 
+                <h5 class="my-h5">NO BOOKS AVAILABLE.</h5>
+                <h6 class="my-h6">YOU ARE YET TO SELECT A BOOK.</h6>
+
+                <!-- UPLOADING FILES / BOOKS -->
+                <div>
+                    <form action="../php/myBooks.php" method="POST" enctype="multipart/form-data">
+                        <p>
+                            <input type="hidden" name="MAX_FILE_SIZE" value="50000">
+                            <input type="text" name="filename" value="">
+                        </p>
+                        <p>
+                            <input type="file" name="uploadFile" id="upFile">
+                        </p>
+                        <p>
+                            <input type="submit" name="sendFile" value="Save File"> 
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- ACCOUNT DETAILS and Update the account-->
+            <div title="update-account" class="update-account" id="update-account"> 
+                <h5 class="my-h5">ENTER ACCOUNT USERNAME TO UPDATE ACCOUNT</h5>
+                <h6 class="my-h6">THIS FEATURE IS RISTRICTED TO EMAIL AND PHONE NUMBER ONLY.</h6>
+
+                <form action="../php/acctDetails.php" method = "POST">
+                    <input type="text" required name="acctUser" id="acctUser" placeholder="Enter Username to Update Account">
+                    <button class="alt-btn" type="submit" name="updateAcct" id="updateAcct">UPDATE ACCOUNT</button>
+                    <div class="hide-div" id="hide-div">
+                        <p><input type="email" name="newEmail" id="newEmail" placeholder="newEmail" required></p>
+
+                        <p><input type="tel" name="newPhoneWhodis" id="newPhoneWhodis" placeholder="newPhoneWhodis" required></p>
+
+                        <button class="my-btn" type="submit" name="up" value="submit">UPDATE</button>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+        
+        
+    
+       <footer class="the-footer">
+           <div>
+               <p>&copy; Copyright ourStudio.com 2020</p>
+           </div>
+           <div>
+               <p><span>PRIVACY</span> . <span>TERMS OF USE</span></p>
+           </div>
+           <div>
+               <p><a href="tel:0000000000">+1568-898-8989</a></p>
+           </div>
+       </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../script/script.js"></script>
+    <script src="../script/bkSearch.js"></script>
+</body>
+</html>

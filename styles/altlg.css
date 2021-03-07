@@ -1,0 +1,140 @@
+
+section{
+    justify-content: center;
+}
+select{
+    font-weight: lighter;
+    font-size: 19px;
+    background-color: rgba(21, 22, 65, 0.89);
+    color: whitesmoke;
+}
+option{
+    font-weight: lighter;
+    font-size: 18px;
+}
+/* input{
+    font-size: 18px;
+    font-weight: lighter;
+    padding: 7px;
+    border-radius: 14PX ;
+    border: ridge gold 1px;
+    background-color: rgba(21, 22, 65, 0.89);
+    text-align: center;
+    color: white;
+} */
+
+/* CSS CLASSES */
+
+.lg-container{
+    display:inline-flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    box-shadow: white;
+    border-radius: 20px;
+    justify-content: center;
+    width: 50%;
+    align-self: center;
+    margin-left:25%;
+    height: 450px;
+}
+.pic{
+    display: inline;
+    padding-top: 15%;
+    padding-right:15% ;
+}
+.pic p>a{
+    color: black;
+    text-decoration: underline;
+    font-size: 16px;
+}
+.log{
+    padding-top: 15%;
+}
+.log >h4{
+    font-weight: bold;
+    font-size: 24px;
+}
+.log #user,#pass{
+    border-bottom: 1px solid black;
+}
+.log input{
+    border: none;
+    font-style: normal;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 15px;
+    font-size: 17px;
+    background-color: whitesmoke;
+}
+.sub-btn{
+    font-weight: lighter;
+    font-size: 19px;
+    background-color: black;
+    border:none;
+    color: white;
+    padding: 5px 10px;
+    margin: 15%;
+}
+.sub-btn:hover{
+    background-color: rgba(0, 0, 0, 0.781);
+}
+.sigUp-container{
+    display:inline-flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    box-shadow: white;
+    border-radius: 20px;
+    justify-content: center;
+    width: 50%;
+    align-self: center;
+    margin-left:25%;
+    height: 500px;
+}
+.sign-up{
+    padding-top: 6%;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    
+} 
+.sign-up input{
+    border: none;
+    background-color: whitesmoke;
+    padding: 12px;
+}
+.sign-up div{
+    border-bottom: 1px solid black;
+}
+#signUp{
+    font-size: 28px;
+    font-weight: bolder;
+}
+.fg-pass-container{
+    display:inline-flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    box-shadow: white;
+    border-radius: 20px;
+    justify-content: center;
+    width: 50%;
+    align-self: center;
+    margin-left:25%;
+    height: 450px;
+}
+.forgotPass{
+    padding-top: 6%;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+.forgotPass h5{
+    font-weight: bold;
+    font-size: 30px;
+}
+.forgotPass input{
+    border: none;
+    background-color: whitesmoke;
+    padding: 12px;
+}
+.forgotPass div{
+    border-bottom: 1px solid black;
+}

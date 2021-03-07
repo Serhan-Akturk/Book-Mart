@@ -1,0 +1,71 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-image: url(../images/pic3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:95vh;
+}
+.ctp {
+    position: absolute;
+    z-index: 1;
+    padding:5%;
+    color: white;
+    
+}
+article h2{
+    font-family: 'Bangers', cursive;
+    font-size: 60px;
+}
+article p{
+    font-family: 'Bangers', cursive;
+    font-size: 40px;
+}
+article p>a{
+    color: gray;
+    text-decoration: none;
+}
+article p>a:hover{
+    color: white;
+    text-decoration: underline;
+}
+form{
+    padding: 5px 20px;
+}
+form > label{
+    font-family: 'Bangers', cursive;
+    font-weight: lighter;
+    font-size: 23px;
+}
+form >input{
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+    padding: 3px;
+    border: transparent;
+    border-radius: 10px;
+}
+form >button{
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+    background-color: red;
+    border: transparent;
+    padding: 3px;
+    border-radius: 10px;
+
+}
+form >button:hover{
+  color: white;
+  padding:3px 6px;
+  transition: 0.4s;
+
+}
+
+@media only screen and (max-width: 750px){
+    
+}
